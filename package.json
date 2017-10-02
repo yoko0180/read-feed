@@ -12,5 +12,9 @@
   },
   "author": "",
   "license": "MIT",
-  "homepage": "https://bitbucket.org/yoko0180/read-feed#readme"
+  "homepage": "https://bitbucket.org/yoko0180/read-feed#readme",
+  "dependencies": {
+    "feedparser": "^2.2.1",
+    "request": "^2.83.0"
+  }
 }
