@@ -1,6 +1,11 @@
 var FeedParser = require('feedparser');
 var request = require('request');
 
+/** DEBUG ****************/
+// const debug = () => {}
+const debug = console.log
+// ************************
+
 var getfeed = function(feed) {
 
   // var req = request(feed);
