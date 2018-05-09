@@ -21,23 +21,33 @@ describe('# reed-feed', function() {
     //   feed:'http://www.lifehacker.jp/index.xml'
     // },
   
-    main('http://www.lifehacker.jp/index.xml').then( result => {
+    let thened = false
+    return main('http://www.lifehacker.jp/index.xml').then( result => {
+      // thened = true
+      // assert.ok(thened, 'then になっていない')
       assert.ok(result instanceof Array)
-      assert.ok(result.length > 0)
+      assert.ok(result.length > 0, 'アイテムが取得できていない')
     })
+    .catch(console.error)
   });
 
   it('test fail url', function() {
     let catched = false
-    main('failfailfail').then( result => {
+
+    /**
+     * index.jsの実装だとthrowされてしまい、rejectされない
+     */
+    return main('failfailfail').then( result => {
       assert.ok(result instanceof Array)
     })
     .catch( err => {
+      assert.equal(err, 'Error: Invalid URI "failfailfail"')
       catched = true
     })
-    assert.ok(catched, 'catchされていない')
+    .then(value => {
+      assert.ok(catched, 'catchされていない')
+    })
     
   });
-
     
 });

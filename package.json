@@ -2,7 +2,7 @@
   "name": "read-feed",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index3.js",
   "scripts": {
     "test": "node_modules/.bin/mocha test/*.js",
     "test:watch": "node_modules/.bin/mocha -w test/*.js"
