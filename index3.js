@@ -1,5 +1,6 @@
 var FeedParser = require('feedparser');
 var request = require('request');
+var {maybeDecompress, maybeTranslate, getParams} = require('./parse');
 
 /** DEBUG ****************/
 // const debug = () => {}
@@ -36,7 +37,11 @@ var getfeed = function(feed) {
         reject(new Error('Bad status code'));
       }
       else {
-        this.pipe(feedparser);
+        var encoding = res.headers['content-encoding'] || 'identity'
+          , charset = getParams(res.headers['content-type'] || '').charset;
+        res = maybeDecompress(res, encoding);
+        res = maybeTranslate(res, charset);
+        res.pipe(feedparser);
       }
     });
 
