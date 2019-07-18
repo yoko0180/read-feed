@@ -4,7 +4,10 @@
   "description": "",
   "main": "dist/bundle.js",
   "scripts": {
+    "build:wp": "webpack",
+    "build:wp:test": "webpack && node test-man/test1.js",
     "build": "rollup -c",
+    "build:test": "npm run build && node test-man/test1.js",
     "test": "node_modules/.bin/mocha test/*.js",
     "test:watch": "node_modules/.bin/mocha -w test/*.js"
   },
@@ -16,7 +19,7 @@
   "license": "MIT",
   "homepage": "https://bitbucket.org/yoko0180/read-feed#readme",
   "dependencies": {
-    "feedparser": "^2.2.1",
+    "feedparser": "^2.2.9",
     "request": "^2.88.0"
   },
   "devDependencies": {
@@ -26,6 +29,8 @@
     "rollup-plugin-json": "^4.0.0",
     "rollup-plugin-node-resolve": "^5.2.0",
     "rollup-plugin-size": "^0.1.0",
-    "rollup-plugin-terser": "^5.1.1"
+    "rollup-plugin-terser": "^5.1.1",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
   }
 }

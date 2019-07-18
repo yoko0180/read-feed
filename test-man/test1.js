@@ -1,5 +1,8 @@
 
-var main = require('../index3');
+var main = require('../dist/main.js');
+// var {SomeLibrary} = require('../dist/main.js');
+// var main = require('../dist/bundle.js');
+// var main = require('../index3.js');
 
 main('https://news.yahoo.co.jp/pickup/rss.xml').then( result => {
   console.log(result.length)
