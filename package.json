@@ -2,7 +2,7 @@
   "name": "read-feed",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/bundle.js",
+  "main": "dist/main.js",
   "scripts": {
     "build:wp": "webpack",
     "build:wp:test": "webpack && node test-man/test1.js",
