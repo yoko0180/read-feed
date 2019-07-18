@@ -16,7 +16,7 @@
   "homepage": "https://bitbucket.org/yoko0180/read-feed#readme",
   "dependencies": {
     "feedparser": "^2.2.1",
-    "request": "^2.83.0"
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "mocha": "^5.1.1"
