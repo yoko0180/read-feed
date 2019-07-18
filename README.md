@@ -1,7 +1,7 @@
 # read-feed
 
 ```js
-const reedfeed = require('reed-feed');
+const reedfeed = require('read-feed');
 reedfeed('http://www.foo.baa/index.xml').then( result => {
   console.log(result.length)
   if (result.length > 0)
