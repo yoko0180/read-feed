@@ -2,7 +2,7 @@
   "name": "read-feed",
   "version": "1.0.0",
   "description": "",
-  "main": "index3.js",
+  "main": "dist/bundle.js",
   "scripts": {
     "build": "rollup -c",
     "test": "node_modules/.bin/mocha test/*.js",
